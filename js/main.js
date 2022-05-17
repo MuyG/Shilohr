@@ -75,6 +75,27 @@ const portfolio = {
         portfolio[portfolio.currentPage].classList.replace('no-display','display')
         testimonials.checkPage()
     },
+
+    goProject01: function(){
+        portfolio[portfolio.currentPage].classList.replace('display','no-display')
+        portfolio.currentPage = 7
+        portfolio[portfolio.currentPage].classList.replace('no-display','display')
+        testimonials.checkPage()
+    },
+
+    goProject02: function(){
+        portfolio[portfolio.currentPage].classList.replace('display','no-display')
+        portfolio.currentPage = 8
+        portfolio[portfolio.currentPage].classList.replace('no-display','display')
+        testimonials.checkPage()
+    },
+
+    goProject03: function(){
+        portfolio[portfolio.currentPage].classList.replace('display','no-display')
+        portfolio.currentPage = 9
+        portfolio[portfolio.currentPage].classList.replace('no-display','display')
+        testimonials.checkPage()
+    },
 }
 
 const testimonials = {
@@ -106,6 +127,7 @@ const testimonials = {
 }
 
 window.onload = function() {
+    // Forward and Back Arrows
     for(let i = 1; i <= portfolio.totalPages; i++){
         if(i > 1 && i < portfolio.totalPages){
             portfolio[i].children[0].onclick = portfolio.dropSideBar
@@ -121,6 +143,8 @@ window.onload = function() {
             portfolio[i].children[portfolio[i].children.length-1].onclick = portfolio.goPageBack
         }
     }
+
+    // Navigation Links
     let array = document.querySelector('nav').children
     for(let i = 0; i < array.length; i++){
         i == 0 ? array[i].onclick = portfolio.navHome
@@ -129,6 +153,15 @@ window.onload = function() {
         : i == 3 ? array[i].onclick = portfolio.navWorkExperience
         : i == 4 ? array[i].onclick = portfolio.navPortfolio
         : i == 5 ? array[i].onclick = portfolio.navContact
+        : null
+    }
+
+    // Navigation Links
+    array = document.querySelector('.portfolio-section-two').children
+    for(let i = 0; i < array.length; i++){
+        i == 0 ? array[i].onclick = portfolio.goProject01
+        : i == 1 ? array[i].onclick = portfolio.goProject02
+        : i == 2 ? array[i].onclick = portfolio.goProject03
         : null
     }
 }
