@@ -58,7 +58,16 @@ a{
 /* WRAPPER
 /*******************************************/
 
-.wrapper{
+body {
+     position: relative;
+     min-height: 100vh;
+     background-color: #ffffff;
+     opacity: 1;
+     background-image:  linear-gradient(#FBF3E4 0.8px, transparent 0.8px), linear-gradient(to right, #FBF3E4 0.8px, #ffffff 0.8px);
+     background-size: 16px 16px;
+}
+
+/* .wrapper{
      width: 100vw;
      height: 100vh;
      display: flex;
@@ -69,7 +78,7 @@ a{
      opacity: 1;
      background-image:  linear-gradient(#FBF3E4 0.8px, transparent 0.8px), linear-gradient(to right, #FBF3E4 0.8px, #ffffff 0.8px);
      background-size: 16px 16px;
-}
+} */
 
 /******************************************
 /* PANEL
@@ -80,7 +89,9 @@ a{
      width: 1100px;
      height: 650px;
      padding: 75px;
-     margin: 0 auto;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
      overflow: hidden;
      background-color: #FBF3E4;
      -webkit-box-shadow: 15px 15px 0px 0px rgba(64,64,64,1);
@@ -172,25 +183,26 @@ a{
      flex-direction: column;
      justify-content: center;
      align-items: center;
+     font-size: 16px;
 }
      h1.brittany{
-          line-height: 3rem;
-          margin-top: 25px;
-          font-size: 7rem;
+          line-height: 0.45em;
+          margin-top: 80px;
+          font-size: 7em;
           color: #B91646;
           z-index: 1;
      }
 
      h1.bebas{
-          font-size: 10rem;
+          font-size: 10em;
      }
 
      #home h3{
-          padding: 10px 75px;
+          padding: 0.625em 4.6875em;
           border-radius: 5px;
           border: 3px solid black;
-          letter-spacing: 0.2rem;
-          font-size: 1.4rem;
+          letter-spacing: 0.2em;
+          font-size: 1.7em;
           background-color: #DFD8CA;
           transition: 0.3s;
           -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
@@ -213,17 +225,17 @@ a{
      flex-direction: column;
      justify-content: center;
      align-items: space-around;
+     font-size: 16px;
 }
 
      #table-of-contents section{
           text-align: center;
-          font-size: 16px;
      }
 
           #table-of-contents h2.brittany{
                position: relative;
                margin-top: 30px;
-               line-height: 2rem;
+               line-height: 0.45em;
                font-size: 4.5em;
                color: #B91646;
           }
@@ -233,12 +245,12 @@ a{
           }
 
           #table-of-contents p{
-               margin-top: 25px;
+               margin-top: 1.5625em;
                font-size: 1.1em;
           }
 
           #table-of-contents .divider{
-               margin: 50px 0;
+               margin: 3.125em 0;
           }
 
      nav{
@@ -258,7 +270,7 @@ a{
                margin-bottom: 25px;
                border: 3px solid black;
                border-radius: 5px;
-               font-size: 1.5rem;
+               font-size: 1.5em;
                transition: 0.3s;
                -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
                   -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
@@ -309,22 +321,18 @@ a{
                position: relative;
                font-size: 4.5em;
                color: #B91646;
-               margin-top: 30px;
-               margin-bottom: -30px;
+               line-height: 0.25em;
+               margin-top: 1.2em;
           }
 
           #about-me h2.bebas{
                font-size: 6em;
           }
 
-          #about-me section p{
+          #about-me p{
                font-family: 'Poppins';
                font-size: 0.9em;
                line-height: 1.3em;
-          }
-
-          #about-me section div:nth-child(4){
-               display: none;
           }
 
      #about-me div{
@@ -424,6 +432,7 @@ a{
 #work-experience{
      justify-content: space-between;
      align-items: center;
+     font-size: 16px;
 }
 
      .statistics{
@@ -432,7 +441,6 @@ a{
           align-items: center;
           flex-wrap: wrap;
           width: 50%;
-          font-size: 16px;
      }
           .statistics ul{
                width: 50%;
@@ -467,7 +475,6 @@ a{
           border: 3px solid black;
           background-color: #DFD8CA;
           padding: 25px 0;
-          font-size: 16px;
      }
 
           .testimonials ul{
@@ -673,6 +680,7 @@ a{
 #project-02{
      justify-content: flex-start;
      align-items: center;
+     font-size: 16px;
 }
 
      .project-02-a{
@@ -710,13 +718,13 @@ a{
      }
 
           .project-02-section h2{
-               font-size: 6rem;
+               font-size: 6em;
                margin-bottom: 15px;
           }
 
           .project-02-section p{
-               font-size: 1.1rem;
-               line-height: 1.5rem;
+               font-size: 1.1em;
+               line-height: 1.5em;
           }
 
 /******************************************
@@ -726,6 +734,7 @@ a{
 #project-03{
      justify-content: flex-start;
      align-items: center;
+     font-size: 16px;
 }
 
      .project-03-section-one,
@@ -743,7 +752,7 @@ a{
      }
 
           .project-03-section-one h2{
-               font-size: 6rem;
+               font-size: 6em;
           }
 
           .project-03-section-one a{
@@ -802,8 +811,8 @@ a{
           }
 
           .project-03-section-two p{
-               font-size: 1.1rem;
-               line-height: 1.5rem;
+               font-size: 1.1em;
+               line-height: 1.5em;
           }
 
 /******************************************
@@ -912,17 +921,16 @@ a{
 
           .contact-title h2.brittany{
                position: relative;
-               margin-top: 25px;
-               margin-bottom: -25px;
-               font-size: 5rem;
+               line-height: 0.45em;
+               font-size: 5em;
                color: #B91646;
           }
 
           .contact-title h2.bebas{
-               font-size: 7rem;
+               font-size: 7em;
           }
 
-     .contact-bottom-half{
+     .contact-bottom-half {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
@@ -987,26 +995,29 @@ a{
 /*******************************************/
 
 @media (max-width: 1150px) {
-     .wrapper{
-          min-height: 800px;
+
+     body {
+          min-height: 100vh;
+          height: 800px;
      }
 
+     /* Panel */
+
      .panel{
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          padding: 4.5vw;
-          margin: 0 auto;
-          overflow: hidden;
-          background-color: #FBF3E4;
-          -webkit-box-shadow: 15px 15px 0px 0px rgba(0,0,0,0.75);
-             -moz-box-shadow: 15px 15px 0px 0px rgba(0,0,0,0.75);
-                  box-shadow: 15px 15px 0px 0px rgba(0,0,0,0.75);
-          transition: 0.3s ease-in-out;
+          width: 950px;
+          height: 700px;
      }
 
           .nav-icon{
                top: 5%;
+          }
+
+          .forward-arrow {
+               bottom: 4vh;
+          }
+
+          .back-arrow {
+               bottom: 4vh;
           }
 
           .divider{
@@ -1014,9 +1025,13 @@ a{
           }
 
      /* TABLE OF CONTENTS */
+
+     #table-of-contents {
+          font-size: 16px;
+     }
+
      #table-of-contents section{
           text-align: center;
-          font-size: 20px;
      }
 
      nav{
@@ -1030,8 +1045,9 @@ a{
                justify-content: center;
                align-items: center;
                width: 45%;
-               height: 75px;
-               font-size: 2rem;
+               height: 7vh;
+               margin-bottom: 2vh;
+               font-size: 1.5em;
           }
 
                nav a:nth-child(1),
@@ -1053,7 +1069,7 @@ a{
                }
 
           #table-of-contents .divider{
-               margin: 5vw 0;
+               margin: 4vh 0;
           }
 
      /* PROJECT 01 */
@@ -1113,13 +1129,13 @@ a{
           }
      
                .project-02-section h2{
-                    font-size: 6rem;
+                    font-size: 6em;
                     margin-bottom: 0;
                }
      
                .project-02-section p{
-                    font-size: 1.1rem;
-                    line-height: 1.5rem;
+                    font-size: 1.1em;
+                    line-height: 1.5em;
                }
 
      /* PROJECT 03 */
@@ -1162,301 +1178,327 @@ a{
      
                .project-03-section-two p{
                     width: 45%;
-                    font-size: 1.3rem;
-                    line-height: 1.8rem;
+                    font-size: 1.3em;
+                    line-height: 1.8em;
                     margin-left: 25px;
                }
 
      /* CONTACT */
      .contact-title{
           text-align: center;
-          margin-top: -100px;
+          margin-top: 0;
      }
 }
 
-@media (max-width: 950px){
-     /* PERSONAL SKILLS */
-     #personal-skills{
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+@media screen and (max-width: 950px) {
+
+     /* Body */
+
+     body {
+          min-height: 100vh;
+          height: 900px;
      }
-          .personal-skills-text{
+
+     /* Panel */
+
+     .panel{
+          width: 650px;
+          height: 800px;
+          transition: 0.3s ease-in-out;
+     }
+
+     /* Personal Skills */
+
+     #personal-skills {
+          flex-direction: column;
+          justify-content: space-evenly;
+     }
+
+          .personal-skills-text {
                width: 100%;
-               text-align: center;
           }
-     
+
+          .personal-skills-images {
+               width: 100%;
+          }
+
                .personal-skills-images ul{
-                    width: 250px;
-                    height: 400px;
-                    padding: 15px;
-                    margin-top: 25px;
+                    height: 300px;
+                    width: 50%;
+                    
                }
 
-               .personal-skills-images li{
-                    text-align: center;
+               .personal-skills-images ul:nth-child(1){
+                    background-color: #105652;
+                    margin-left: 0;
+                    margin-right: 25px;
                }
-     
-                    .personal-skills-images ul:nth-child(1){
-                         margin-left: 0;
-                         margin-right: 25px;
-                    }
-     
-                         #web-app-img{
-                              width: 100%;
-                              height: 85%;
-                              margin-bottom: 20px;
-                              background: url(../assets/images/web-app.jpg);
-                              background-size: cover;
-                         }
-     
-                    .personal-skills-images ul:nth-child(2){
-                         background-color: #B91646;
-                    }
-     
-                         #website-img{
-                              width: 100%;
-                              height: 85%;
-                              margin-bottom: 20px;
-                              background: url(../assets/images/website.jpg);
-                              background-size: cover;
-                         }
 
-     /* WORK EXPERIENCE */
-     #work-experience{
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-     }
-
-          .statistics,
-          .testimonials{
-               width: 100%;
-               font-size: 13px;
-          }
-
-          .testimonials{
-               margin-top: 25px;
-          }
-
-     /* PORTFOLIO */
-     .portfolio-section-one{
-          width: 100%;
-     }
-
-     .portfolio-section-two a{
-          width: 75%;
-     }
-}
-
-@media (max-width: 770px){
-     /* ABOUT ME */
+     /* About Me */
      #about-me div{
+          height: 400px;
+          width: 200px;
+          overflow: hidden;
           float: right;
-          margin-left: 15px;
-          padding: 15px;
+          margin-left: 0;
+          padding: 0;
+          background: url('../assets/images/about-me-pic.jpg');
+          background-size: cover;
+          background-position: 50% 10%;
+          border-radius: 10px;
+          border: 15px solid #B91646;
+          -webkit-box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+          -moz-box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+          box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
      }
 
           #about-me div img{
-               width: 35vw;
+               display: none;
           }
 
-     /* PROJECT 01 */
-     #project-01{
-          font-size: 12px;
-     }
+     /* Work Experience */
 
-     .project-01-section-one{
-          width: 100%;
-          margin-bottom: 10px;
-     }
-
-     .project-01-section-two{
-          display: flex;
+     #work-experience {
           flex-direction: column;
           justify-content: space-evenly;
           align-items: center;
-          width: 100%;
-          height: 60%;
-          margin-left: 0;
+          font-size: 12px;
      }
 
-          .project-01-section-two a:nth-child(1),
-          .project-01-section-two a:nth-child(2){
-               width: 80%;
-               height: 40%;
-               margin: 0;
-          }    
-
-     /* PROJECT 03 */
-     .project-03-section-one{
-          margin-top: -75px;
-     }
-
-          .project-03-section-one h2{
-               font-size: 4rem;
+          .statistics{
+               width: 100%;
           }
 
-          .project-03-section-one div{
-               background-size: 175%;
-               background-repeat: no-repeat;
-               background-position: 50% 20%;
+          .testimonials{
+               width: 100%;
           }
 
-          .project-03-section-two p{
-               font-size: 1.1rem;
-               line-height: 1.5rem;
-          }
-
-          .project-03-section-two div{
-               background-size: 175%;
-               background-repeat: no-repeat;
-               background-position: 50% 20%;
-          }
-
-     /* CONTACT */
-     #contact{
+     /* Portfolio */
+     #portfolio {
           font-size: 14px;
      }
+
+          .portfolio-section-one {
+               width: 100%;
+          }
+
+          .portfolio-section-two a {
+               width: 100%;
+               margin: 10px 0;
+               padding: 20px 0;
+          }
+
+     /* Project 01 */
+
+     #project-01 {
+          font-size: 14px;
+     }
+
+     /* Project 03 */
+
+     #project-03 {
+          font-size: 14px;
+     }
+
+          #project-03 h2 {
+               font-size: 5em;
+          }
 }
 
-@media (max-width: 575px){
-     /* PANEL */
-     .forward-arrow,
-     .back-arrow{
-          bottom: 5%;
+@media screen and (max-width: 650px) {
+
+     /* Body */
+
+     body {
+          min-height: 100vh;
+          height: 900px;
      }
 
-     /* HOME */
-     h1.brittany{
-          line-height: 3rem;
-          margin-top: 25px;
-          font-size: 19.5vw;
+     /* Panel */
+
+     .panel{
+          width: 400px;
+          height: 800px;
+          padding: 25px;
      }
 
-     h1.bebas{
-          font-size: 27.8vw;
+          .nav-icon{
+               top: 2%;
+          }
+
+     /* Home */
+
+     #home {
+          font-size: 11px;
      }
 
      #home h3{
-          padding: 10px 75px;
-          font-size: 1.4rem;
+          padding: 0.625em 2em;
      }
 
-     /* TABLE OF CONTENTS */
-     #table-of-contents section{
-          text-align: center;
+     /* Table of Contents */
+
+     #table-of-contents {
           font-size: 14px;
      }
 
      nav a{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 95%;
-          height: 45px;
-          margin-bottom: 15px;
-          font-size: 1.8em;
+          font-size: 1.5em;
      }
 
-     /* ABOUT ME */
-     #about-me section div:nth-child(1){
-          display: none;
-     }
+     /* About Me */
 
-     #about-me section div:nth-child(4){
-          display: inline-block;
-     }
-
-     /* PERSONAL SKILLS */
-     .personal-skills-images ul{
-          width: 43.5vw;
-          height: 69.5vw;
-          padding: 15px;
-          margin-top: 25px;
-     }
-
-     /* PORTFOLIO */
-     #portfolio{
-          font-size: 14px;
-     }
-
-     .portfolio-section-two a{
-          width: 100%;
-     }
-
-     /* PROJECT 02 */
-     .project-02-section h2{
-          font-size: 5rem;
-          margin-bottom: 0;
-     }
-
-     /* PROJECT 03 */
-     .project-03-section-one,
-     .project-03-section-two{
-          height: 30%;
-     }
-
-     .project-03-section-one{
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-     }
-
-          .project-03-section-one a{
-               width: 100%;
-               height: 100%;
-               padding: 15px;
-          }
-
-          .project-03-section-one h2{
-               font-size: 3rem;
-          }
-
-          .project-03-section-one div{
-               background-size: 100%;
-               background-repeat: no-repeat;
-               background-position: 50% 10%;
-          }
-
-          .project-03-section-two p{
-               font-size: 1.1rem;
-               line-height: 1.5rem;
-          }
-
-          .project-03-section-two div{
-               background-size: 250%;
-               background-repeat: no-repeat;
-               background-position: 50% 20%;
-          }
-
-     /* CONTACT */
-     #contact{
+     #about-me {
           font-size: 12px;
+     }
+
+          #about-me p {
+               font-size: 1.2em;
+          }     
+          
+          #about-me section {
+               display: flex;
+               flex-direction: column;
+               margin-top: 25px;
+          }
+
+               #about-me div{
+                    height: 200px;
+                    width: 280px;
+                    overflow: hidden;
+                    float: none;
+                    margin-left: 0;
+                    padding: 0;
+                    background: url('../assets/images/about-me-pic.jpg');
+                    background-size: cover;
+                    background-position: 50% 10%;
+                    border-radius: 10px;
+                    border: 15px solid #B91646;
+                    -webkit-box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+                    -moz-box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+                    box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+               }
+
+     /* Personal Skills */
+
+     #personal-skills {
+          font-size: 12px;
+          justify-content: center;
+     }
+
+          .personal-skills-text {
+               margin-bottom: 25px;
+          }
+
+     /* Project 01 */
+     #project-01 {
+          font-size: 12px;
+     }
+
+          .project-01-section-two {
+               flex-direction: column;
+               width: 100%;
+               height: 450px;
+          }
+
+          .project-01-section-two a:nth-child(1),
+          .project-01-section-two a:nth-child(2){
+                    width: 100%;
+                    height: 100%;
+                    margin: 10px;
+               }
+
+     /* Project 02 */
+     #project-02 {
+          font-size: 12px;
+     }
+
+     /* Project 03 */
+     #project-03 {
+          font-size: 12px;
+     }
+
+          .project-03-section-one,
+          .project-03-section-two{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: flex-start;
+          }
+
+          .project-03-section-two{
+               flex-direction: column-reverse;
+          }
+
+               .project-03-section-one a,
+               .project-03-section-two a,
+               .project-03-section-two p{
+                    width: 100%;
+               }
+
+     /* Contact */
+
+     .contact-title {
+          margin-top: 50px;
      }
 
      .contact-bottom-half{
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          align-items: flex-start;
+          align-items: flex-end;
           flex-wrap: nowrap;
      }
 
           #contact-form{
                width: 100%;
-               margin-bottom: 50px;
           }
 
-               .contact-bottom-half ul{
-                    width: 100%;
-                    height: 100px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    font-size: 1.1em;
-                    text-align: center;
-               }
+          .contact-bottom-half ul{
+               width: 100%;
+               height: 150px;
+               margin-top: 50px;
+          }
 }
 
+@media screen and (max-width: 400px) {
+     /* Body */
+
+     body {
+          min-height: 100vh;
+          height: 900px;
+     }
+
+     /* Panel */
+
+     .panel{
+          width: 350px;
+          height: 800px;
+          padding: 25px;
+            -webkit-box-shadow: 10px 10px 0px 0px rgba(64,64,64,1);
+               -moz-box-shadow: 10px 10px 0px 0px rgba(64,64,64,1);
+                    box-shadow: 10px 10px 0px 0px rgba(64,64,64,1);
+     }
+
+     /* Home */
+
+     #home {
+          font-size: 10px;
+     }
+
+     /* About Me */
+
+     #about-me {
+          font-size: 11px;
+     }
+
+          #about-me div{
+               width: 100%;
+          }
+
+     /* Contact */
+
+     #contact {
+          font-size: 14px;
+     }
+}

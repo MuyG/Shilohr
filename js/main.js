@@ -274,11 +274,11 @@ const portfolio = {
         portfolio[portfolio.previousPage].style.zIndex = '20'
         setTimeout( _ => {
             portfolio[portfolio.currentPage].classList.replace('no-display','display')
-            portfolio[portfolio.previousPage].style.transform = 'translate(-300px, -800px) rotate(-15deg)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-100%, -180%) rotate(-15deg)'
         }, 75)
         setTimeout( _ => {
             portfolio[portfolio.currentPage].style.zIndex = '200'
-            portfolio[portfolio.previousPage].style.transform = 'translate(0, 0) rotate(0)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-50%, -50%) rotate(0)'
         }, 375)
         setTimeout( _ => {
             portfolio[portfolio.previousPage].style.zIndex = '2'
@@ -294,11 +294,11 @@ const portfolio = {
             portfolio[portfolio.currentPage].classList.replace('no-display','display')
         }, 75)
         setTimeout( _ => {
-            portfolio[portfolio.currentPage].style.transform = 'translate(-300px, -800px) rotate(-15deg)'
+            portfolio[portfolio.currentPage].style.transform = 'translate(-100%, -180%) rotate(-15deg)'
         }, 100)
         setTimeout( _ => {
             portfolio[portfolio.currentPage].style.zIndex = '200'
-            portfolio[portfolio.currentPage].style.transform = 'translate(0, 0) rotate(0)'
+            portfolio[portfolio.currentPage].style.transform = 'translate(-50%, -50%) rotate(0)'
         }, 400)
         setTimeout( _ => {
             portfolio[portfolio.previousPage].style.zIndex = '2'
@@ -314,13 +314,13 @@ const portfolio = {
         portfolio[portfolio.previousPage].style.zIndex = '20'
         setTimeout( _ => {
             portfolio[portfolio.currentPage].classList.replace('no-display','display')
-            portfolio[portfolio.previousPage].style.transform = 'translateX(-100vw)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-200%, -50%)'
         }, 75)
         setTimeout( _ => {
             portfolio[portfolio.previousPage].style.zIndex = '2'
             portfolio[portfolio.currentPage].style.zIndex = '1'
             portfolio[portfolio.previousPage].classList.replace('display','no-display')
-            portfolio[portfolio.previousPage].style.transform = 'translateX(0)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-50%, -50%)'
             portfolio.animating = false
         }, 375)
     },
@@ -329,13 +329,13 @@ const portfolio = {
         portfolio[portfolio.previousPage].style.zIndex = '20'
         setTimeout( _ => {
             portfolio[portfolio.currentPage].classList.replace('no-display','display')
-            portfolio[portfolio.previousPage].style.transform = 'translateX(100vw)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(200%, -50%)'
         }, 75)
         setTimeout( _ => {
             portfolio[portfolio.previousPage].style.zIndex = '2'
             portfolio[portfolio.currentPage].style.zIndex = '1'
             portfolio[portfolio.previousPage].classList.replace('display','no-display')
-            portfolio[portfolio.previousPage].style.transform = 'translateX(0)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-50%, -50%)'
             portfolio.animating = false
         }, 375)
     },
@@ -344,13 +344,13 @@ const portfolio = {
         portfolio[portfolio.previousPage].style.zIndex = '20'
         setTimeout( _ => {
             portfolio[portfolio.currentPage].classList.replace('no-display','display')
-            portfolio[portfolio.previousPage].style.transform = 'translateY(-100vh)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-50%, -200%)'
         }, 75)
         setTimeout( _ => {
             portfolio[portfolio.previousPage].style.zIndex = '2'
             portfolio[portfolio.currentPage].style.zIndex = '1'
             portfolio[portfolio.previousPage].classList.replace('display','no-display')
-            portfolio[portfolio.previousPage].style.transform = 'translateY(0)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-50%, -50%)'
             portfolio.animating = false
         }, 375)
     },
@@ -359,13 +359,13 @@ const portfolio = {
         portfolio[portfolio.previousPage].style.zIndex = '20'
         setTimeout( _ => {
             portfolio[portfolio.currentPage].classList.replace('no-display','display')
-            portfolio[portfolio.previousPage].style.transform = 'translateY(100vh)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-50%, 200%)'
         }, 75)
         setTimeout( _ => {
             portfolio[portfolio.previousPage].style.zIndex = '2'
             portfolio[portfolio.currentPage].style.zIndex = '1'
             portfolio[portfolio.previousPage].classList.replace('display','no-display')
-            portfolio[portfolio.previousPage].style.transform = 'translateY(0)'
+            portfolio[portfolio.previousPage].style.transform = 'translate(-50%, -50%)'
             portfolio.animating = false
         }, 375)
     }
