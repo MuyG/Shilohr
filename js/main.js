@@ -12,91 +12,377 @@ const portfolio = {
     9: document.getElementById('project-03'),
     10: document.getElementById('contact'),
     totalPages: 10,
+    previousPage: 0,
+    animating: false,
+    mobile: false,
 
     goPageForward: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage++
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage++
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageForward()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage++
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageForwardMobile()
+            testimonials.checkPage()
+        }
     },
 
     goPageBack: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage--
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage--
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage--
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBackMobile()
+            testimonials.checkPage()
+        }
     },
 
     dropSideBar: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 2
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 2
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageForward()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 2
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageDownMobile()
+            testimonials.checkPage()
+        }
     },
 
     navHome: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 1
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 1
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 1
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
 
     navAboutMe: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 3
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 3
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 3
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
 
     navPersonalSkills: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 4
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 4
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 4
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
 
     navWorkExperience: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 5
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 5
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 5
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
 
     navPortfolio: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 6
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 6
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 6
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
 
     navContact: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 10
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 10
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 10
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
 
     goProject01: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 7
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 7
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 7
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
 
     goProject02: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 8
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 8
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 8
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
 
     goProject03: function(){
-        portfolio[portfolio.currentPage].classList.replace('display','no-display')
-        portfolio.currentPage = 9
-        portfolio[portfolio.currentPage].classList.replace('no-display','display')
-        testimonials.checkPage()
+        if(!portfolio.animating && !portfolio.mobile){
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 9
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageBack()
+            testimonials.checkPage()
+        }
+        else if(!portfolio.animating && portfolio.mobile) {
+            portfolio.animating = true
+            portfolio.previousPage = portfolio.currentPage
+            portfolio.currentPage = 9
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio.animatePageUpMobile()
+            testimonials.checkPage()
+        }
     },
+
+    // Animations
+
+    animatePageForward: function(){
+        portfolio[portfolio.previousPage].style.zIndex = '20'
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].classList.replace('no-display','display')
+            portfolio[portfolio.previousPage].style.transform = 'translate(-300px, -800px) rotate(-15deg)'
+        }, 75)
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].style.zIndex = '200'
+            portfolio[portfolio.previousPage].style.transform = 'translate(0, 0) rotate(0)'
+        }, 375)
+        setTimeout( _ => {
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio[portfolio.previousPage].classList.replace('display','no-display')
+            portfolio.animating = false
+        }, 675)
+    },
+
+    animatePageBack: function(){
+        portfolio[portfolio.previousPage].style.zIndex = '20'
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].classList.replace('no-display','display')
+        }, 75)
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].style.transform = 'translate(-300px, -800px) rotate(-15deg)'
+        }, 100)
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].style.zIndex = '200'
+            portfolio[portfolio.currentPage].style.transform = 'translate(0, 0) rotate(0)'
+        }, 400)
+        setTimeout( _ => {
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio[portfolio.previousPage].classList.replace('display','no-display')
+            portfolio.animating = false
+        }, 700)
+    },
+
+    // Mobile Animations
+
+    animatePageForwardMobile: function(){
+        portfolio[portfolio.previousPage].style.zIndex = '20'
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].classList.replace('no-display','display')
+            portfolio[portfolio.previousPage].style.transform = 'translateX(-100vw)'
+        }, 75)
+        setTimeout( _ => {
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio[portfolio.previousPage].classList.replace('display','no-display')
+            portfolio[portfolio.previousPage].style.transform = 'translateX(0)'
+            portfolio.animating = false
+        }, 375)
+    },
+
+    animatePageBackMobile: function(){
+        portfolio[portfolio.previousPage].style.zIndex = '20'
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].classList.replace('no-display','display')
+            portfolio[portfolio.previousPage].style.transform = 'translateX(100vw)'
+        }, 75)
+        setTimeout( _ => {
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio[portfolio.previousPage].classList.replace('display','no-display')
+            portfolio[portfolio.previousPage].style.transform = 'translateX(0)'
+            portfolio.animating = false
+        }, 375)
+    },
+
+    animatePageUpMobile: function(){
+        portfolio[portfolio.previousPage].style.zIndex = '20'
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].classList.replace('no-display','display')
+            portfolio[portfolio.previousPage].style.transform = 'translateY(-100vh)'
+        }, 75)
+        setTimeout( _ => {
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio[portfolio.previousPage].classList.replace('display','no-display')
+            portfolio[portfolio.previousPage].style.transform = 'translateY(0)'
+            portfolio.animating = false
+        }, 375)
+    },
+
+    animatePageDownMobile: function(){
+        portfolio[portfolio.previousPage].style.zIndex = '20'
+        setTimeout( _ => {
+            portfolio[portfolio.currentPage].classList.replace('no-display','display')
+            portfolio[portfolio.previousPage].style.transform = 'translateY(100vh)'
+        }, 75)
+        setTimeout( _ => {
+            portfolio[portfolio.previousPage].style.zIndex = '2'
+            portfolio[portfolio.currentPage].style.zIndex = '1'
+            portfolio[portfolio.previousPage].classList.replace('display','no-display')
+            portfolio[portfolio.previousPage].style.transform = 'translateY(0)'
+            portfolio.animating = false
+        }, 375)
+    }
 }
+
+// Check viewport size to see how far to translate the side bar and move the nav icon
+const viewport = {
+    size: window.matchMedia("(max-width: 1150px)"),
+
+    checkSize(){
+        if(viewport.size.matches){
+            portfolio.mobile = true
+        }
+    }
+}
+
+viewport.checkSize()
 
 const testimonials = {
     currentSlide: 1,
